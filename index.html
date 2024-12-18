@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Berry | Login</title>
+        <link rel="icon" type="image/png" href="logo1.png" sizes="32x32" />
+        <link rel="stylesheet" href="style.css" />
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyBQ1IV7vC0sydLzK0jxYULRdZ6o3wmi-6w",
+                authDomain: "berryme2807.firebaseapp.com",
+                projectId: "berryme2807",
+                storageBucket: "berryme2807.appspot.com",
+                messagingSenderId: "267631834119",
+                appId: "1:267631834119:web:c75bb2dfa997b52d4de6a2",
+                measurementId: "G-4XEJ2HB0VE",
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+    </head>
+
+    <body>
+        <main>
+            <!-- Login Page -->
+            <div class="container visible" id="loginContainer">
+                <img src="logo.png" alt="Berry Logo" class="login-logo" />
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="user_id">User ID</label>
+                        <input
+                            type="text"
+                            id="user_id"
+                            name="user_id"
+                            placeholder="Enter your ID"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        />
+                    </div>
+                    <input type="submit" value="Login" />
+                </form>
+            </div>
+
+            <!-- Welcome Page -->
+            <div class="container" id="welcomeContainer">
+                <h2>Welcome, <span id="displayUserId"></span>!</h2>
+                <p>Selamat datang di berry.me Project.</p>
+                <button class="profile-btn" id="goToProfileBtn">
+                    Go to Profile
+                </button>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+
+            <!-- Profile Page -->
+            <div class="container" id="profileContainer">
+                <h2>Profile Page</h2>
+                <div class="profile-wrapper">
+                    <img id="profilePhoto" src="" alt="Profile Photo" />
+                    <div class="profile-info">
+                        <p>
+                            <strong>Nama Lengkap:</strong>
+                            <span id="profileName"></span>
+                        </p>
+                        <p>
+                            <strong>Panggilan:</strong>
+                            <span id="profilePanggilan"></span>
+                        </p>
+                        <p>
+                            <strong>Hobby:</strong>
+                            <span id="profileHobby"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="profile-btn" id="goToNotesBtn">
+                        Go to Notes
+                    </button>
+                    <button class="back-btn" id="backToWelcomeBtn">
+                        Back to Welcome
+                    </button>
+                    <button class="logout-btn" id="logoutBtnFromProfile">
+                        Logout
+                    </button>
+                </div>
+                <audio controls>
+                    <source src="audio.mp3" />
+                </audio>
+                <center>
+                    Kata-kata hari ini: Semoga aku dan lala bisa sama-sama terus
+                </center>
+            </div>
+
+            <!-- Notes Page -->
+            <div class="container" id="notesContainer">
+                <h2>Catatan</h2>
+                <textarea
+                    id="notesInput"
+                    rows="10"
+                    placeholder="Tulis catatan Anda..."
+                ></textarea>
+                <button class="profile-btn" id="saveNotesBtn">
+                    Save Notes
+                </button>
+                <button class="download-btn" id="downloadNotesBtn">
+                    Download Notes
+                </button>
+                <button class="back-btn" id="backToProfileBtn">
+                    Back to Profile
+                </button>
+            </div>
+        </main>
+        <script src="script.js"></script>
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {},
+                Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"),
+                    s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src =
+                    "https://embed.tawk.to/6760dd67af5bfec1dbdd4272/1if961nme";
+                s1.charset = "UTF-8";
+                s1.setAttribute("crossorigin", "*");
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+    </body>
+</html>
