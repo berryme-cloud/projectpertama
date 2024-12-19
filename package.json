@@ -1,0 +1,15 @@
+{
+  "name": "berryme",
+  "version": "1.0.0",
+  "description": "A simple app for BerryMe project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
